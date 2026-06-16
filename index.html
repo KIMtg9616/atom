@@ -1137,6 +1137,8 @@
       bohrAngle: 0,
       bohrPhoton: null,
       bohrView: 'orbit',
+      bohrOrbitMode: 'basic',
+      bohrLastTransitions: { basic: null, extended: null },
       spectrumActiveLines: [],
       spectrumPulse: 0,
       deBroglieN: 3,
@@ -1195,7 +1197,7 @@
         deep: '보어 모형은 수소 원자의 선 스펙트럼을 설명하기 위해 전자의 에너지가 양자화되어 있다는 생각을 도입했습니다. 전자는 허용된 에너지 준위 사이를 전이하며, 준위 차이에 맞는 에너지의 빛을 흡수하거나 방출합니다.',
         question: '전자가 허용된 에너지 준위에서만 존재한다면, 왜 수소의 빛에서 특정 파장의 선들만 나타날까요?',
         limit: '수소처럼 단순한 원자는 잘 설명하지만, 전자가 여러 개인 원자와 전자의 파동성, 확률적 존재를 충분히 설명하지 못합니다.',
-        desc: '여러 개의 원형 궤도가 있고, 전자가 선택된 에너지 준위의 궤도를 따라 움직입니다.',
+        desc: 'n=1~3 기본 모형과 n=1~6 확장 모형을 선택할 수 있습니다. 전자가 준위 사이를 전이할 때 에너지 차이에 따라 서로 다른 파장의 빛을 흡수하거나 방출하는 모습을 비교합니다.',
         nature: '좋은 모형은 이전 모형보다 더 많은 현상을 설명합니다. 그러나 그것이 완전한 실재 그 자체라는 뜻은 아닙니다.'
       },
       debroglie: {
@@ -1270,7 +1272,7 @@
             "deep": "Bohr introduced quantized electron energies to explain the line spectrum of hydrogen. Electrons transition between allowed energy levels by absorbing or emitting light whose energy matches the level difference.",
             "question": "If electrons can occupy only allowed energy levels, why do only particular wavelength lines appear in hydrogen light?",
             "limit": "It works well for simple atoms such as hydrogen, but it cannot fully explain many-electron atoms, wave behavior, or probability.",
-            "desc": "Several circular orbits are shown, and the electron moves along the selected energy level.",
+            "desc": "You can choose a basic n=1–3 model or an extended n=1–6 model. The simulation compares how transitions between different energy levels absorb or emit different wavelengths of light.",
             "nature": "A good model explains more phenomena than earlier models. But that does not mean it is the complete reality itself."
       },
       "debroglie": {
@@ -1332,7 +1334,7 @@
             "deep": "玻尔为了说明氢原子的线光谱，引入了电子能量量子化的思想。电子在允许能级之间跃迁，并吸收或放出与能级差相符的光。",
             "question": "如果电子只能处在允许能级，为什么氢光谱中只出现特定波长的谱线？",
             "limit": "能较好解释氢等简单原子，但不能充分解释多电子原子、电子波动性和概率性存在。",
-            "desc": "画面显示几个圆形轨道，电子沿所选能级轨道运动。",
+            "desc": "可以选择 n=1～3 的基本模型或 n=1～6 的扩展模型，并比较电子在不同能级之间跃迁时所吸收或发射的不同波长的光。",
             "nature": "好的模型能比旧模型解释更多现象，但并不等于完整的真实本身。"
       },
       "debroglie": {
@@ -1394,7 +1396,7 @@
             "deep": "ボーアは水素原子の線スペクトルを説明するために、電子のエネルギーが量子化されているという考えを導入しました。電子は準位差に合うエネルギーの光を吸収または放出して、許されたエネルギー準位の間を遷移します。",
             "question": "電子が許されたエネルギー準位だけにあるなら、なぜ水素の光には特定の波長の線だけが現れるのでしょうか。",
             "limit": "水素のような単純な原子はよく説明できますが、多電子原子、電子の波動性、確率的な存在を十分には説明できません。",
-            "desc": "複数の円形軌道があり、電子が選択されたエネルギー準位の軌道を動きます。",
+            "desc": "n=1～3 の基本模型と n=1～6 の拡張模型を選び、異なる準位間の遷移で吸収・放出される光の波長を比較できます。",
             "nature": "よい模型は以前の模型より多くの現象を説明します。しかし、それが完全な実在そのものという意味ではありません。"
       },
       "debroglie": {
@@ -1456,7 +1458,7 @@
             "deep": "Bohr đưa ra ý tưởng năng lượng electron bị lượng tử hóa để giải thích quang phổ vạch của hydro. Electron chuyển giữa các mức năng lượng được phép bằng cách hấp thụ hoặc phát ra ánh sáng có năng lượng phù hợp với độ chênh mức.",
             "question": "Nếu electron chỉ ở các mức năng lượng được phép, vì sao ánh sáng hydro chỉ có những vạch bước sóng nhất định?",
             "limit": "Giải thích khá tốt nguyên tử đơn giản như hydro, nhưng chưa giải thích đầy đủ nguyên tử nhiều electron, tính sóng và xác suất.",
-            "desc": "Một số quỹ đạo tròn được hiển thị, và electron chuyển động trên mức năng lượng được chọn.",
+            "desc": "Có thể chọn mô hình cơ bản n=1–3 hoặc mô hình mở rộng n=1–6 và so sánh bước sóng ánh sáng được hấp thụ hoặc phát xạ khi electron chuyển giữa các mức năng lượng khác nhau.",
             "nature": "Mô hình tốt giải thích được nhiều hiện tượng hơn mô hình cũ, nhưng không có nghĩa nó là toàn bộ thực tại."
       },
       "debroglie": {
@@ -4049,42 +4051,315 @@
       ctx.restore();
     }
 
+    const bohrText = {
+      ko: {
+        activityChoose: '보어 체험 선택',
+        orbitView: '원자모형 보기: 에너지 준위',
+        spectrumView: '실험 보기: 수소 선 스펙트럼',
+        rangeChoose: '보어 원자모형 범위 비교',
+        basicMode: '기본 모형: n=1~3',
+        extendedMode: '확장 모형: n=1~6',
+        titleBasic: '보어: n=1~3 에너지 준위',
+        titleExtended: '보어: n=1~6 여러 에너지 준위',
+        levelControls: '에너지 준위와 빛 조작',
+        absorb: '빛 흡수: 한 단계 높은 준위',
+        emit: '빛 방출: 한 단계 낮은 준위',
+        statusBasic: '기본 모형(n=1~3) · 현재 전자: n={n}',
+        statusExtended: '확장 모형(n=1~6) · 현재 전자: n={n}',
+        transitionNote: '전이 n={from}→n={to} · λ ≈ {wavelength} · {region}',
+        compareGuide: '빛의 파장은 표시된 궤도 수가 아니라, 전이한 두 에너지 준위의 차이로 결정됩니다.',
+        comparisonLine: '최근 파장 비교 — n≤3: {basic} · n≤6: {extended}',
+        noTransition: '아직 전이 없음',
+        shortTransition: 'n={from}→{to}, {wavelength}',
+        ultraviolet: '자외선',
+        visible: '가시광선',
+        infrared: '적외선',
+        absorbLabel: '흡수  λ≈{wavelength}',
+        emitLabel: '방출  λ≈{wavelength}',
+        spectrumControls: '수소 선 스펙트럼 조작',
+        caption: '보어 모형: n=1~3 기본 모형과 n=1~6 확장 모형을 전환하여, 에너지 준위 차이에 따른 흡수·방출 빛의 파장을 비교할 수 있습니다.'
+      },
+      en: {
+        activityChoose: 'Choose a Bohr activity',
+        orbitView: 'Atomic model: energy levels',
+        spectrumView: 'Experiment: hydrogen line spectrum',
+        rangeChoose: 'Compare Bohr model ranges',
+        basicMode: 'Basic model: n=1–3',
+        extendedMode: 'Extended model: n=1–6',
+        titleBasic: 'Bohr: energy levels n=1–3',
+        titleExtended: 'Bohr: multiple energy levels n=1–6',
+        levelControls: 'Energy levels and light',
+        absorb: 'Absorb light: one level higher',
+        emit: 'Emit light: one level lower',
+        statusBasic: 'Basic model (n=1–3) · electron at n={n}',
+        statusExtended: 'Extended model (n=1–6) · electron at n={n}',
+        transitionNote: 'Transition n={from}→n={to} · λ ≈ {wavelength} · {region}',
+        compareGuide: 'The wavelength is determined by the energy difference between the two levels, not by the number of orbits displayed.',
+        comparisonLine: 'Recent wavelength comparison — n≤3: {basic} · n≤6: {extended}',
+        noTransition: 'no transition yet',
+        shortTransition: 'n={from}→{to}, {wavelength}',
+        ultraviolet: 'ultraviolet',
+        visible: 'visible light',
+        infrared: 'infrared',
+        absorbLabel: 'absorb  λ≈{wavelength}',
+        emitLabel: 'emit  λ≈{wavelength}',
+        spectrumControls: 'Hydrogen line spectrum controls',
+        caption: 'Bohr model: switch between the basic n=1–3 model and the extended n=1–6 model to compare the wavelengths of absorbed and emitted light for different energy gaps.'
+      },
+      zh: {
+        activityChoose: '选择玻尔模型活动',
+        orbitView: '原子模型：能级',
+        spectrumView: '实验：氢原子线光谱',
+        rangeChoose: '比较玻尔模型的能级范围',
+        basicMode: '基本模型：n=1～3',
+        extendedMode: '扩展模型：n=1～6',
+        titleBasic: '玻尔模型：n=1～3 能级',
+        titleExtended: '玻尔模型：n=1～6 多个能级',
+        levelControls: '能级与光的操作',
+        absorb: '吸收光：升高一个能级',
+        emit: '发射光：降低一个能级',
+        statusBasic: '基本模型（n=1～3）· 电子位于 n={n}',
+        statusExtended: '扩展模型（n=1～6）· 电子位于 n={n}',
+        transitionNote: '跃迁 n={from}→n={to} · λ ≈ {wavelength} · {region}',
+        compareGuide: '光的波长由发生跃迁的两个能级之间的能量差决定，而不是由画面中轨道的数量决定。',
+        comparisonLine: '最近波长比较 — n≤3：{basic} · n≤6：{extended}',
+        noTransition: '尚未发生跃迁',
+        shortTransition: 'n={from}→{to}，{wavelength}',
+        ultraviolet: '紫外线',
+        visible: '可见光',
+        infrared: '红外线',
+        absorbLabel: '吸收  λ≈{wavelength}',
+        emitLabel: '发射  λ≈{wavelength}',
+        spectrumControls: '氢原子线光谱操作',
+        caption: '玻尔模型：可在 n=1～3 基本模型和 n=1～6 扩展模型之间切换，比较不同能级差对应的吸收光和发射光波长。'
+      },
+      ja: {
+        activityChoose: 'ボーア模型の活動選択',
+        orbitView: '原子模型：エネルギー準位',
+        spectrumView: '実験：水素の線スペクトル',
+        rangeChoose: 'ボーア模型の準位範囲を比較',
+        basicMode: '基本模型：n=1～3',
+        extendedMode: '拡張模型：n=1～6',
+        titleBasic: 'ボーア模型：n=1～3 のエネルギー準位',
+        titleExtended: 'ボーア模型：n=1～6 の複数のエネルギー準位',
+        levelControls: 'エネルギー準位と光の操作',
+        absorb: '光を吸収：1段階高い準位へ',
+        emit: '光を放出：1段階低い準位へ',
+        statusBasic: '基本模型（n=1～3）・電子は n={n}',
+        statusExtended: '拡張模型（n=1～6）・電子は n={n}',
+        transitionNote: '遷移 n={from}→n={to}・λ ≈ {wavelength}・{region}',
+        compareGuide: '光の波長は、表示された軌道の数ではなく、遷移した二つのエネルギー準位の差で決まります。',
+        comparisonLine: '直近の波長比較 — n≤3：{basic}・n≤6：{extended}',
+        noTransition: 'まだ遷移していません',
+        shortTransition: 'n={from}→{to}、{wavelength}',
+        ultraviolet: '紫外線',
+        visible: '可視光',
+        infrared: '赤外線',
+        absorbLabel: '吸収  λ≈{wavelength}',
+        emitLabel: '放出  λ≈{wavelength}',
+        spectrumControls: '水素の線スペクトル操作',
+        caption: 'ボーア模型：n=1～3 の基本模型と n=1～6 の拡張模型を切り替え、エネルギー差による吸収・放出光の波長を比較できます。'
+      },
+      vi: {
+        activityChoose: 'Chọn hoạt động mô hình Bohr',
+        orbitView: 'Mô hình nguyên tử: các mức năng lượng',
+        spectrumView: 'Thí nghiệm: quang phổ vạch của hiđrô',
+        rangeChoose: 'So sánh phạm vi mức năng lượng của mô hình Bohr',
+        basicMode: 'Mô hình cơ bản: n=1–3',
+        extendedMode: 'Mô hình mở rộng: n=1–6',
+        titleBasic: 'Bohr: các mức năng lượng n=1–3',
+        titleExtended: 'Bohr: nhiều mức năng lượng n=1–6',
+        levelControls: 'Điều khiển mức năng lượng và ánh sáng',
+        absorb: 'Hấp thụ ánh sáng: lên một mức',
+        emit: 'Phát xạ ánh sáng: xuống một mức',
+        statusBasic: 'Mô hình cơ bản (n=1–3) · electron ở n={n}',
+        statusExtended: 'Mô hình mở rộng (n=1–6) · electron ở n={n}',
+        transitionNote: 'Chuyển mức n={from}→n={to} · λ ≈ {wavelength} · {region}',
+        compareGuide: 'Bước sóng được quyết định bởi độ chênh năng lượng giữa hai mức chuyển tiếp, không phải bởi số quỹ đạo được vẽ.',
+        comparisonLine: 'So sánh bước sóng gần nhất — n≤3: {basic} · n≤6: {extended}',
+        noTransition: 'chưa có chuyển mức',
+        shortTransition: 'n={from}→{to}, {wavelength}',
+        ultraviolet: 'tia tử ngoại',
+        visible: 'ánh sáng nhìn thấy',
+        infrared: 'tia hồng ngoại',
+        absorbLabel: 'hấp thụ  λ≈{wavelength}',
+        emitLabel: 'phát xạ  λ≈{wavelength}',
+        spectrumControls: 'Điều khiển quang phổ vạch hiđrô',
+        caption: 'Mô hình Bohr: chuyển giữa mô hình cơ bản n=1–3 và mô hình mở rộng n=1–6 để so sánh bước sóng ánh sáng hấp thụ và phát xạ ứng với các độ chênh năng lượng khác nhau.'
+      }
+    };
+
+    function bohrT(key, vars = {}) {
+      const pack = bohrText[state.lang] || bohrText.ko;
+      let value = pack[key] || bohrText.ko[key] || key;
+      return String(value).replace(/\{(\w+)\}/g, (_, name) => String(vars[name] ?? ''));
+    }
+
+    function getBohrMaxN() {
+      return state.bohrOrbitMode === 'extended' ? 6 : 3;
+    }
+
+    function getBohrRadii() {
+      return state.bohrOrbitMode === 'extended'
+        ? [58, 92, 126, 160, 194, 228]
+        : [82, 145, 215];
+    }
+
+    function getHydrogenTransitionWavelength(fromN, toN) {
+      const energyEv = 13.6 * Math.abs((1 / (toN * toN)) - (1 / (fromN * fromN)));
+      return energyEv > 0 ? 1239.841984 / energyEv : Infinity;
+    }
+
+    function formatBohrWavelength(wavelengthNm, compact = false) {
+      if (!Number.isFinite(wavelengthNm)) return '—';
+      if (wavelengthNm >= 1000) {
+        const micrometers = wavelengthNm / 1000;
+        return compact
+          ? `${micrometers.toFixed(2)} μm`
+          : `${micrometers.toFixed(2)} μm (${Math.round(wavelengthNm)} nm)`;
+      }
+      return `${wavelengthNm < 200 ? wavelengthNm.toFixed(1) : Math.round(wavelengthNm)} nm`;
+    }
+
+    function getBohrRegionKey(wavelengthNm) {
+      if (wavelengthNm < 380) return 'ultraviolet';
+      if (wavelengthNm <= 700) return 'visible';
+      return 'infrared';
+    }
+
+    function bohrWavelengthColor(wavelengthNm) {
+      if (wavelengthNm < 380) return '#a78bfa';
+      if (wavelengthNm < 450) return '#8b5cf6';
+      if (wavelengthNm < 495) return '#3b82f6';
+      if (wavelengthNm < 570) return '#22c55e';
+      if (wavelengthNm < 590) return '#facc15';
+      if (wavelengthNm < 620) return '#fb923c';
+      if (wavelengthNm <= 700) return '#ff5b5b';
+      return '#fb7185';
+    }
+
     function getBohrPhotonStyle(photon) {
-      const low = Math.min(photon.fromN ?? state.bohrN, photon.toN ?? state.bohrN);
-      const high = Math.max(photon.fromN ?? state.bohrN, photon.toN ?? state.bohrN);
-      if (low === 1 && high === 2) {
-        return { color: '#a78bfa', note: sciText('bohrUvNote') };
-      }
-      if (low === 2 && high === 3) {
-        return { color: '#ff5b5b', note: sciText('bohrRedNote') };
-      }
-      return { color: '#facc15', note: sciText('bohrOrbitScaleNote') };
+      const fromN = photon.fromN ?? state.bohrN;
+      const toN = photon.toN ?? state.bohrN;
+      const wavelengthNm = getHydrogenTransitionWavelength(fromN, toN);
+      const wavelength = formatBohrWavelength(wavelengthNm);
+      const region = bohrT(getBohrRegionKey(wavelengthNm));
+      const cycles = Math.max(
+        3,
+        Math.min(16, Math.round(8 * Math.pow(656.3 / wavelengthNm, 0.45)))
+      );
+
+      return {
+        color: bohrWavelengthColor(wavelengthNm),
+        wavelengthNm,
+        wavelength,
+        region,
+        cycles,
+        note: bohrT('transitionNote', { from: fromN, to: toN, wavelength, region })
+      };
+    }
+
+    function rememberBohrTransition(transition) {
+      state.bohrLastTransitions[state.bohrOrbitMode] = {
+        kind: transition.kind,
+        fromN: transition.fromN,
+        toN: transition.toN
+      };
+    }
+
+    function startBohrTransition(kind) {
+      const maxN = getBohrMaxN();
+      if (kind === 'absorb' && state.bohrN >= maxN) return;
+      if (kind === 'emit' && state.bohrN <= 1) return;
+
+      const fromN = state.bohrN;
+      const toN = kind === 'absorb' ? fromN + 1 : fromN - 1;
+      const transition = {
+        kind,
+        fromN,
+        toN,
+        t: 0,
+        startedAt: performance.now()
+      };
+
+      state.bohrN = toN;
+      state.bohrPhoton = transition;
+      rememberBohrTransition(transition);
+      renderControls();
+    }
+
+    function setBohrOrbitMode(mode) {
+      state.bohrOrbitMode = mode;
+      const maxN = getBohrMaxN();
+      if (state.bohrN > maxN) state.bohrN = maxN;
+      state.bohrPhoton = null;
+      renderControls();
+    }
+
+    function getBohrTransitionSummary(mode) {
+      const transition = state.bohrLastTransitions[mode];
+      if (!transition) return bohrT('noTransition');
+
+      const wavelengthNm = getHydrogenTransitionWavelength(transition.fromN, transition.toN);
+      return bohrT('shortTransition', {
+        from: transition.fromN,
+        to: transition.toN,
+        wavelength: formatBohrWavelength(wavelengthNm, true)
+      });
+    }
+
+    function drawBohrTitleLabel(label) {
+      ctx.save();
+      ctx.font = `800 ${state.lang === 'vi' ? 18 : 20}px "Noto Sans KR", system-ui, sans-serif`;
+      const measured = ctx.measureText(label).width;
+      ctx.restore();
+
+      const boxWidth = Math.min(760, Math.max(300, measured + 52));
+      roundRect(24, 22, boxWidth, 54, 14, 'rgba(15,23,42,.78)', 'rgba(148,163,184,.3)');
+      text(label, 42, 50, state.lang === 'vi' ? 18 : 20, '#f8fafc', 'left', '800');
     }
 
     function drawBohrOrbit() {
       const pal = getPal();
-      drawAtomLabel('보어: 허용된 에너지 준위와 궤도');
-      const radii = [82, 145, 215];
+      const maxN = getBohrMaxN();
+      const radii = getBohrRadii();
+
+      if (state.bohrN > maxN) state.bohrN = maxN;
+
+      drawBohrTitleLabel(bohrT(state.bohrOrbitMode === 'extended' ? 'titleExtended' : 'titleBasic'));
+
       ctx.save();
       for (let i = 0; i < radii.length; i++) {
         ctx.strokeStyle = i + 1 === state.bohrN ? 'rgba(250,204,21,.9)' : 'rgba(226,232,240,.36)';
         ctx.lineWidth = i + 1 === state.bohrN ? 4 : 2;
-        ctx.beginPath(); ctx.arc(CX, CY, radii[i], 0, Math.PI * 2); ctx.stroke();
-        text(`n=${i+1}`, CX + radii[i] + 18, CY - 4, 16, '#cbd5e1', 'left', '600');
+        ctx.beginPath();
+        ctx.arc(CX, CY, radii[i], 0, Math.PI * 2);
+        ctx.stroke();
+
+        const labelSize = state.bohrOrbitMode === 'extended' ? 13 : 16;
+        text(`n=${i + 1}`, CX + radii[i] + 13, CY - 4, labelSize, '#cbd5e1', 'left', '600');
       }
       ctx.restore();
+
       const grad = ctx.createRadialGradient(CX - 12, CY - 12, 2, CX, CY, 45);
-      grad.addColorStop(0, '#fff'); grad.addColorStop(.25, pal.nucleus); grad.addColorStop(1, '#7c2d12');
+      grad.addColorStop(0, '#fff');
+      grad.addColorStop(.25, pal.nucleus);
+      grad.addColorStop(1, '#7c2d12');
       circle(CX, CY, 42, grad, '#fff', 2);
       text(tr('핵'), CX, CY, 18, '#000000');
-      state.bohrAngle += .025 / state.bohrN;
+
+      state.bohrAngle += .025 / Math.max(1, state.bohrN);
       const r = radii[state.bohrN - 1];
       const ex = CX + Math.cos(state.bohrAngle) * r;
       const ey = CY + Math.sin(state.bohrAngle) * r;
       circle(ex, ey, 14, pal.electron, '#fff', 2);
       text(tr('전자'), ex + 28, ey, 15, '#f8fafc', 'left');
 
-      let photonNote = sciText('bohrOrbitScaleNote');
+      const lastCurrent = state.bohrLastTransitions[state.bohrOrbitMode];
+      let photonNote = lastCurrent
+        ? getBohrPhotonStyle(lastCurrent).note
+        : bohrT('compareGuide');
+
       if (state.bohrPhoton) {
         const ph = state.bohrPhoton;
         if (!ph.startedAt) ph.startedAt = performance.now();
@@ -4098,40 +4373,43 @@
         const photonStyle = getBohrPhotonStyle(ph);
         const color = photonStyle.color;
         photonNote = photonStyle.note;
-        const label = ph.kind === 'absorb' ? tr('빛 흡수 방향') : tr('빛 방출 방향');
+        const label = bohrT(ph.kind === 'absorb' ? 'absorbLabel' : 'emitLabel', {
+          wavelength: formatBohrWavelength(photonStyle.wavelengthNm, true)
+        });
 
-        // 빛 파동: 약 1초 동안 화면에 남아 학생이 방향과 파동을 충분히 볼 수 있게 합니다.
         ctx.save();
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
         ctx.shadowColor = color;
         ctx.shadowBlur = 18;
 
-        // 흰 외곽 파동을 먼저 그려 어두운 배경에서도 잘 보이게 합니다.
         ctx.strokeStyle = 'rgba(255,255,255,.72)';
         ctx.lineWidth = 10;
         ctx.beginPath();
-        for (let i = 0; i < 90; i++) {
-          const u = i / 89;
+        for (let i = 0; i < 120; i++) {
+          const u = i / 119;
           const x = x0 + (x1 - x0) * u;
-          const y = y0 + (y1 - y0) * u + Math.sin(u * Math.PI * 10 + state.time * 8) * 11;
-          if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+          const y = y0 + (y1 - y0) * u
+            + Math.sin(u * Math.PI * 2 * photonStyle.cycles + state.time * 8) * 11;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
         }
         ctx.stroke();
 
         ctx.strokeStyle = color;
         ctx.lineWidth = 5.5;
         ctx.beginPath();
-        for (let i = 0; i < 90; i++) {
-          const u = i / 89;
+        for (let i = 0; i < 120; i++) {
+          const u = i / 119;
           const x = x0 + (x1 - x0) * u;
-          const y = y0 + (y1 - y0) * u + Math.sin(u * Math.PI * 10 + state.time * 8) * 11;
-          if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+          const y = y0 + (y1 - y0) * u
+            + Math.sin(u * Math.PI * 2 * photonStyle.cycles + state.time * 8) * 11;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
         }
         ctx.stroke();
         ctx.restore();
 
-        // 파동 바로 위에 굵은 방향 화살표를 크게 표시합니다.
         const dirX0 = x0 + (x1 - x0) * .17;
         const dirY0 = y0 + (y1 - y0) * .17 - 38;
         const dirX1 = x0 + (x1 - x0) * .86;
@@ -4140,15 +4418,37 @@
 
         const labelX = (dirX0 + dirX1) / 2;
         const labelY = (dirY0 + dirY1) / 2 - 30;
-        roundRect(labelX - 80, labelY - 22, 160, 34, 12, 'rgba(2,6,23,.82)', 'rgba(255,255,255,.65)');
-        text(label, labelX, labelY + 2, 20, color, 'center', '900');
+        roundRect(labelX - 145, labelY - 22, 290, 36, 12, 'rgba(2,6,23,.86)', 'rgba(255,255,255,.65)');
+        text(label, labelX, labelY + 2, state.lang === 'vi' ? 14 : 16, color, 'center', '900');
 
-        if (elapsed > 1100) state.bohrPhoton = null;
+        if (elapsed > 1500) state.bohrPhoton = null;
       }
 
-      roundRect(80, 585, 800, 95, 16, 'rgba(15,23,42,.72)', 'rgba(148,163,184,.25)');
-      wrappedText(formatMsg('bohrEnergy', { n: state.bohrN }), 480, 612, 735, state.lang === 'vi' ? 14 : 17, '#f8fafc', 'center', '700', null, 2);
-      wrappedText(photonNote, 480, 654, 735, state.lang === 'vi' ? 12 : 14, '#cbd5e1', 'center', '600', null, 2);
+      const statusKey = state.bohrOrbitMode === 'extended' ? 'statusExtended' : 'statusBasic';
+      const comparison = bohrT('comparisonLine', {
+        basic: getBohrTransitionSummary('basic'),
+        extended: getBohrTransitionSummary('extended')
+      });
+
+      roundRect(72, 535, 816, 150, 16, 'rgba(15,23,42,.74)', 'rgba(148,163,184,.25)');
+      wrappedText(
+        bohrT(statusKey, { n: state.bohrN }),
+        480, 562, 755,
+        state.lang === 'vi' ? 13 : 17,
+        '#f8fafc', 'center', '700', null, 2
+      );
+      wrappedText(
+        photonNote,
+        480, 602, 755,
+        state.lang === 'vi' ? 11 : 14,
+        '#cbd5e1', 'center', '600', null, 2
+      );
+      wrappedText(
+        comparison,
+        480, 652, 755,
+        state.lang === 'vi' ? 10 : 12,
+        '#94a3b8', 'center', '600', null, 2
+      );
     }
 
     const hydrogenLines = [
@@ -4848,42 +5148,69 @@
       }
 
       if (state.model === 'bohr') {
-        dynamicControls.append(group('보어 체험 선택', [
-          button('원자모형 보기: 에너지 준위', () => { state.bohrView = 'orbit'; renderControls(); }, state.bohrView === 'orbit' ? 'active' : ''),
-          button('실험 보기: 수소 선 스펙트럼', () => { state.bohrView = 'spectrum'; renderControls(); }, state.bohrView === 'spectrum' ? 'active' : '')
+        dynamicControls.append(group(bohrT('activityChoose'), [
+          button(bohrT('orbitView'), () => {
+            state.bohrView = 'orbit';
+            renderControls();
+          }, state.bohrView === 'orbit' ? 'active' : ''),
+          button(bohrT('spectrumView'), () => {
+            state.bohrView = 'spectrum';
+            renderControls();
+          }, state.bohrView === 'spectrum' ? 'active' : '')
         ]));
+
         if (state.bohrView === 'orbit') {
-          dynamicControls.append(group('에너지 준위와 빛 조작', [
-            button('n=1', () => { state.bohrN = 1; renderControls(); }, state.bohrN === 1 ? 'active' : ''),
-            button('n=2', () => { state.bohrN = 2; renderControls(); }, state.bohrN === 2 ? 'active' : ''),
-            button('n=3', () => { state.bohrN = 3; renderControls(); }, state.bohrN === 3 ? 'active' : ''),
-            button('빛 흡수: 높은 에너지 준위', () => {
-              if (state.bohrN >= 3) return;
-              const fromN = state.bohrN;
-              const toN = fromN + 1;
-              state.bohrN = toN;
-              state.bohrPhoton = { kind:'absorb', fromN, toN, t:0, startedAt: performance.now() };
-              renderControls();
-            }, 'good'),
-            button('빛 방출: 낮은 에너지 준위', () => {
-              if (state.bohrN <= 1) return;
-              const fromN = state.bohrN;
-              const toN = fromN - 1;
-              state.bohrN = toN;
-              state.bohrPhoton = { kind:'emit', fromN, toN, t:0, startedAt: performance.now() };
-              renderControls();
-            }, 'warning')
+          dynamicControls.append(group(bohrT('rangeChoose'), [
+            button(bohrT('basicMode'), () => {
+              setBohrOrbitMode('basic');
+            }, state.bohrOrbitMode === 'basic' ? 'active' : ''),
+            button(bohrT('extendedMode'), () => {
+              setBohrOrbitMode('extended');
+            }, state.bohrOrbitMode === 'extended' ? 'active' : '')
           ]));
+
+          const maxN = getBohrMaxN();
+          const levelButtons = Array.from({ length: maxN }, (_, index) => {
+            const n = index + 1;
+            return button(`n=${n}`, () => {
+              state.bohrN = n;
+              state.bohrPhoton = null;
+              renderControls();
+            }, state.bohrN === n ? 'active' : '');
+          });
+
+          levelButtons.push(
+            button(bohrT('absorb'), () => startBohrTransition('absorb'), 'good'),
+            button(bohrT('emit'), () => startBohrTransition('emit'), 'warning')
+          );
+
+          dynamicControls.append(group(bohrT('levelControls'), levelButtons));
         } else {
-          dynamicControls.append(group('수소 선 스펙트럼 조작', [
-            button('전체 선 보기', () => { state.spectrumActiveLines = ['all']; renderControls(); }, state.spectrumActiveLines.includes('all') || state.spectrumActiveLines.length === 0 ? 'active' : ''),
-            button('Hα 656 nm', () => { state.spectrumActiveLines = ['Hα']; renderControls(); }, state.spectrumActiveLines.includes('Hα') ? 'active' : ''),
-            button('Hβ 486 nm', () => { state.spectrumActiveLines = ['Hβ']; renderControls(); }, state.spectrumActiveLines.includes('Hβ') ? 'active' : ''),
-            button('Hγ 434 nm', () => { state.spectrumActiveLines = ['Hγ']; renderControls(); }, state.spectrumActiveLines.includes('Hγ') ? 'active' : ''),
-            button('Hδ 410 nm', () => { state.spectrumActiveLines = ['Hδ']; renderControls(); }, state.spectrumActiveLines.includes('Hδ') ? 'active' : '')
+          dynamicControls.append(group(bohrT('spectrumControls'), [
+            button('전체 선 보기', () => {
+              state.spectrumActiveLines = ['all'];
+              renderControls();
+            }, state.spectrumActiveLines.includes('all') || state.spectrumActiveLines.length === 0 ? 'active' : ''),
+            button('Hα 656 nm', () => {
+              state.spectrumActiveLines = ['Hα'];
+              renderControls();
+            }, state.spectrumActiveLines.includes('Hα') ? 'active' : ''),
+            button('Hβ 486 nm', () => {
+              state.spectrumActiveLines = ['Hβ'];
+              renderControls();
+            }, state.spectrumActiveLines.includes('Hβ') ? 'active' : ''),
+            button('Hγ 434 nm', () => {
+              state.spectrumActiveLines = ['Hγ'];
+              renderControls();
+            }, state.spectrumActiveLines.includes('Hγ') ? 'active' : ''),
+            button('Hδ 410 nm', () => {
+              state.spectrumActiveLines = ['Hδ'];
+              renderControls();
+            }, state.spectrumActiveLines.includes('Hδ') ? 'active' : '')
           ]));
         }
-        canvasCaption.textContent = tr('보어 모형: 에너지 준위 전이와 수소 선 스펙트럼을 탐구할 수 있습니다.');
+
+        canvasCaption.textContent = bohrT('caption');
       }
 
       if (state.model === 'debroglie') {
